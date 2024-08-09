@@ -15,5 +15,18 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+-- enable clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- Copy selected text to clipboard
+vim.api.nvim_set_keymap("v", "<C-S-c>", '"+y', { noremap = true, silent = true })
+
+-- Cut selected text to clipboard
+vim.api.nvim_set_keymap("v", "<C-S-x>", '"+d', { noremap = true, silent = true })
+
+-- Paste from sytem clipboard
+vim.api.nvim_set_keymap("n", "<C-S-v>", '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-S-v>", '"+p', { noremap = true, silent = true })
+
 require "lazy_setup"
 require "polish"

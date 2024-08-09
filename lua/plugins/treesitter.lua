@@ -11,9 +11,9 @@ return {
       "python",
       "javascript",
       "c",
-      "c++",
+      "cpp",
       "html",
-      "css"
+      "css",
       -- add more arguments for adding more treesitter parsers
     },
   },
